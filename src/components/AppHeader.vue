@@ -10,8 +10,10 @@ export default {
 }
 </script>
 <template>
-    <input v-model="store.texArea" type="text" placeholder="Cerca film e serie tv">
-    <button @click="$emit('performSearch')">Cerca</button>
+  <form @submit.prevent="$emit('performSearch')">
+    <input v-model="store.texArea" type="text" placeholder="Cerca film e serie tv" required>
+    <button type="submit">Cerca</button>
+  </form>
 </template>
 
 

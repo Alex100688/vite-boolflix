@@ -1,18 +1,17 @@
 <script>
-import SectionSelect from './SectionSelect.vue';
-import SectionCharacters from './SectionCharacters.vue';
+import { store } from '../store';
+import AppMovies from './AppMovies.vue';
 export default
     {
         name: "AppMain",
         components: {
-           SectionSelect,
-            SectionCharacters,
+            AppMovies,
     },
        
     }
 </script>
 <template>
-    
+    <AppMovies v-for="film in store.films" :info="film"/>
 </template>
 
 
