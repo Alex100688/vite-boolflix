@@ -2,13 +2,15 @@
 export default
     {
         name: "AppMovies", 
-        components: {
-           
-        },
+        props: {
+            info:Object,
+       }
     }
 </script>
 <template>
-        
+    <div>
+        <h4>{{info.title}}</h4>
+    </div>    
 </template>
 
 

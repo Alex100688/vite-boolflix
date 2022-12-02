@@ -7,7 +7,11 @@ export default
         components: {
             AppMovies,
     },
-       
+    data() {
+        return {
+            store,
+        }
+    },   
     }
 </script>
 <template>
