@@ -2,6 +2,7 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
+import axios from "axios";
 export default {
   components:
   { AppHeader,
@@ -20,8 +21,5 @@ export default {
 
 
 <style lang="scss">
-@import "./style/global.scss";
-body{
-  background-color: #2e3a46;
-}
+
 </style>
