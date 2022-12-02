@@ -1,10 +1,16 @@
 <script>
-    export default {
-      name:"AppHeader"  
+import { store } from "../store";
+export default {
+  name: "AppHeader",  
+  data() {
+    return {
+      store,
     }
+  },
+}
 </script>
 <template>
-    <input type="text" placeholder="Cerca film e serie tv">
+    <input v-model="store.texArea" type="text" placeholder="Cerca film e serie tv">
     <button>Cerca</button>
 </template>
 
