@@ -19,13 +19,13 @@ export default {
     informationData() {
       axios.get('https://api.themoviedb.org/3/search/movie', {
         params: {
-          ape_key: '37f2b7b1da343584c7b426f0fd22a4db',
-          query: this.store.texArea,
+          api_key: '37f2b7b1da343584c7b426f0fd22a4db',
+          query: this.store.textArea,
           language: 'it-IT',
         }
       }).then((respo) => {
         this.store.films = respo.data.results;
-      })
+      });
     },
   },
 }

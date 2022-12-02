@@ -1,15 +1,15 @@
 <script>
-import { store } from '../store';
 import AppMovies from './AppMovies.vue';
+import { store } from '../store';
 export default
     {
         name: "AppMain",
         components: {
             AppMovies,
     },
-    data() {
-        return {
-            store,
+        data() {
+            return {
+                store,
         }
     },   
     }

@@ -11,7 +11,7 @@ export default {
 </script>
 <template>
   <form @submit.prevent="$emit('performSearch')">
-    <input v-model="store.texArea" type="text" placeholder="Cerca film e serie tv" required>
+    <input v-model="store.textArea" type="text" placeholder="Cerca film e serie tv" required>
     <button type="submit">Cerca</button>
   </form>
 </template>
