@@ -11,7 +11,7 @@ export default {
 </script>
 <template>
     <input v-model="store.texArea" type="text" placeholder="Cerca film e serie tv">
-    <button>Cerca</button>
+    <button @click="$emit('performSearch')">Cerca</button>
 </template>
 
 
