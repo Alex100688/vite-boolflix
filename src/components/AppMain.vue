@@ -16,13 +16,13 @@ export default
 </script>
 <template>
     <Section>
-            <div class="row">
-                <h2>SERIE TV</h2>
-                <AppMovies v-for="film in store.films" :info="film"/>
-                <h2>SERIE TV</h2>
-                <AppMovies v-for="serie in store.series" :info="serie"/>
-            </div>
+        <h2>FILM</h2>
+        <AppMovies v-for="film in store.films" :info="film"/>
     </Section>
+    <section>
+        <h2>SERIE TV</h2>
+        <AppMovies v-for="serie in store.series" :info="serie"/>
+    </section>
 </template>
 
 

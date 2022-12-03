@@ -25,9 +25,8 @@ h1{
   font-size: 2.5rem;
 }
 .search{
-    height: 2.5rem;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-left: .3125rem;
   }
 .button-search{
