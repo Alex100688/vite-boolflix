@@ -29,19 +29,18 @@ export default
 <template>
     <div>
         <img :src="`https://image.tmdb.org/t/p/w342/${ info.poster_path}`">
-            <div class="special">
-                <h4>{{ info.title || info.name}}</h4>
-                <h3>{{ info.original_title || info.original_name}}</h3>
-                <CountryFlag :country="dataFlag(info.original_language)" size="bold"/>
-                <font-awesome-icon class="star" v-for="n in vote" icon="fa-solid fa-star"/>
-                <font-awesome-icon class="star-white" v-for=" n in 5 - vote" icon="fa-regular fa-star"/> 
-            </div>
+            <h4>{{ info.title || info.name}}</h4>
+            <h3>{{ info.original_title || info.original_name}}</h3>
+            <CountryFlag :country="dataFlag(info.original_language)" size="bold"/>
+            <font-awesome-icon class="star" v-for="n in vote" icon="fa-solid fa-star"/>
+            <font-awesome-icon class="star-white" v-for=" n in 5 - vote" icon="fa-regular fa-star"/>               
     </div>
        
 </template>
 
 
 <style lang="scss" scoped>
+
     
    img{
     display: block;
