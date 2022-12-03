@@ -26,8 +26,6 @@ export default {
       }).then((respo) => {
         this.store.films = respo.data.results;
       });  
-    },
-    informationData() {
       axios.get('https://api.themoviedb.org/3/search/tv', {
         params: {
           api_key: '37f2b7b1da343584c7b426f0fd22a4db',
@@ -35,14 +33,15 @@ export default {
           language: 'it-IT',
         }
       }).then((respo) => {
+        console.log(this.store.series)
         this.store.series = respo.data.results;
       });  
-    },
+    },  
   },
 }
 </script>
 <template>
-  <div>
+  <div class="container">
     <AppHeader @performSearch="informationData"/>
     <AppMain/>
     <AppFooter/>
@@ -51,5 +50,12 @@ export default {
 
 
 <style lang="scss">
-
+  body{
+    background-color: black;
+    color: #ffff;
+  }
+  .container{
+    max-width: 62.5rem;
+    margin: auto;
+  }
 </style>
