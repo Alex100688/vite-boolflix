@@ -27,6 +27,7 @@ export default
 </script>
 <template>
     <div>
+        <img :src="`https://image.tmdb.org/t/p/w342/${ info.poster_path}`">
         <h4>{{ info.title}}</h4>
         <h3>{{ info.original_title}}</h3>
         <CountryFlag :country="dataFlag(info.original_language)" size="bold"/>
@@ -34,7 +35,6 @@ export default
         <font-awesome-icon v-for="n in vote" icon="fa-solid fa-star"/>
         <font-awesome-icon v-for=" n in 5 - vote" icon="fa-regular fa-star"/>
         </div>
-        <img :src="`https://image.tmdb.org/t/p/w342/${ info.poster_path}`">
         
     </div>    
 </template>
